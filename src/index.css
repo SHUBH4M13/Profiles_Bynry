@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('src/public/helvetica-255/Helvetica-Bold.ttf') format('ttf'),
+  url('src/public/helvetica-255/Helvetica.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-Helvetica : "helvetica" , sans-serif;
+  --color-BgBlue: #111827;
+  --color-CardBlue: #1f2937;
+  --color-LightBlue: #1d4ed8;
+  --color-HoverBlue: #1d4fd8d7;
+}
