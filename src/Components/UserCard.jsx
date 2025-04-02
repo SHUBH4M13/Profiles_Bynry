@@ -1,9 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function UserCard( {photo , name , desc , location } ) {
+export default function UserCard({ photo, name, desc, location }) {
+
+
+    const Navigate = useNavigate();
+
+    function GotoProfile() {
+        Navigate("/profile:")
+    }
+
     return (
         <div className=' w-[300px] h-[390px] bg-CardBlue px-10 py-5 flex flex-col rounded-xl border-white/30 border-2 hover:border-LightBlue duration-200 '>
 
@@ -26,7 +35,9 @@ export default function UserCard( {photo , name , desc , location } ) {
             </div>
 
             <div className='flex flex-col justify-center items-center gap-5'>
-                <button className='bg-LightBlue text-white p-3 font-Helvetica rounded-xl cursor-pointer hover:bg-[#1d4fd8d7] duration-200'>
+                <button className='bg-LightBlue text-white p-3 font-Helvetica rounded-xl cursor-pointer hover:bg-[#1d4fd8d7] duration-200' 
+                onClick={GotoProfile}
+                >
                     Summary
                 </button>
             </div>
