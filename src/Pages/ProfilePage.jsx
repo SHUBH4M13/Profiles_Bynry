@@ -6,13 +6,14 @@ import { faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 const map_api = `AIzaSyCj-YMGBL8x0f2jtXsAbClAB0FvrwttkbU`
 
-export default function UserProfile() {
+export default function UserProfile( {name , }) {
 
     const Navigate = useNavigate();
 
     function GoToHome() {
         Navigate("/")
     }
+
 
 
     return (
@@ -37,17 +38,17 @@ export default function UserProfile() {
                             />
                         </div>
 
-                        <p className='text-3xl text-white text-center font-Helvetica'>Shubham Karna</p>
+                        <p className='text-3xl text-white text-center font-Helvetica'>{name}</p>
 
                         <div className='flex justify-center py-5 px-6'>
                             <p className='text-white/70 text-center font-Helvetica'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magni at iste, explicabo harum ducimus voluptates autem quas laborum optio nam sapiente illo officiis perferendis iure quam aut libero hic!
+                                {desc}
                             </p>
                         </div>
 
                         <div className='flex justify-center py-5 items-center gap-2'>
                             <FontAwesomeIcon icon={faLocationDot} className='text-LightBlue' />
-                            <p className='font-Helvetica text-white'>Magarpatta</p>
+                            <p className='font-Helvetica text-white'>{area}</p>
                         </div>
                     </div>
 

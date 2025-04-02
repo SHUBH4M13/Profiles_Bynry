@@ -3,8 +3,16 @@ import SearchBar from '../Components/SearchBar';
 import UserCard from '../Components/UserCard';
 import ProfileData from '../public/ProfileData';
 import Company from '../Components/Company';
+import { useNavigate } from 'react-router';
 
 function HomePage() {
+
+    const Navigate = useNavigate();
+    function GoToAdmin() {
+        Navigate("/admin")
+    }
+
+
     const [query, setQuery] = useState('');
     const [company, setCompany] = useState('');
 
@@ -19,6 +27,11 @@ function HomePage() {
                 <div>
                     <Company setCompany={setCompany} />
                 </div>
+
+                <div className='bg-LightBlue text-white p-3 font-Helvetica rounded-xl cursor-pointer hover:bg-[#1d4fd8d7] duration-200'>
+                    <button onClick={GoToAdmin}
+                    >Admin</button>
+                </div>
             </div>
 
             <div className="w-full flex justify-center">
@@ -29,7 +42,6 @@ function HomePage() {
                         const check = checkQuery && companyMatch ;
                         return ( checkQuery && companyMatch ) ;
                     }).map((user, index) => (
-                        
                         <UserCard
                             key={index}
                             photo={user.photo}
@@ -37,7 +49,6 @@ function HomePage() {
                             desc={user.desc}
                             location={user.location}
                         />
-
                     ))}
                 </div>
             </div>
