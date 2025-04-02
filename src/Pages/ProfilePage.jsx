@@ -19,7 +19,7 @@ export default function UserProfile() {
 
         <APIProvider apiKey={map_api}>
 
-            <div className=' bg-[#111827] min-h-screen flex flex-col'>
+            <div className=' bg-[#111827] min-h-screen '>
 
                 <div className=' py-10 flex justify-center items-center'>
                     <button 
@@ -62,5 +62,7 @@ export default function UserProfile() {
         </APIProvider>
     );
 }
+
+
 
 

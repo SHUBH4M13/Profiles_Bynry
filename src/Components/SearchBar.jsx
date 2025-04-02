@@ -4,7 +4,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 export default function SearchBar({ setQuery }) {
     return (
-        <div className="relative w-[475px]">
+        <div className="relative w-fit">
 
             <div className="flex items-center">
                 <FontAwesomeIcon
