@@ -5,7 +5,7 @@ const ProfileData = [
     desc: "Software Engineer at Google",
     location: "Magarpatta",
     photo: "https://randomuser.me/api/portraits/men/10.jpg",
-  },
+  }, 
   {
     id: 2,
     name: "Sneha Patil",
@@ -58,7 +58,7 @@ const ProfileData = [
   {
     id: 9,
     name: "Amit Trivedi",
-    desc: "Engineer at Persistent",
+    desc: "Engineer at TCS",
     location: "Pimple Saudagar",
     photo: "https://randomuser.me/api/portraits/men/14.jpg",
   },
@@ -121,7 +121,7 @@ const ProfileData = [
   {
     id: 18,
     name: "Meera Menon",
-    desc: "Project Manager at Deloitte",
+    desc: "Project Manager at Microsoft",
     location: "Aundh",
     photo: "https://randomuser.me/api/portraits/women/18.jpg",
   },
