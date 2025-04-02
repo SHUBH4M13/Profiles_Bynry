@@ -25,7 +25,7 @@ function HomePage() {
                     {ProfileData.filter((user) => {
                     
                         const checkQuery = user.name.toLowerCase().includes(query.toLowerCase()) || user.location.toLowerCase().includes(query.toLowerCase()) 
-                        const companyMatch = !company || user.desc.toLowerCase().includes(company.toLowerCase());
+                        const companyMatch =  user.desc.toLowerCase().includes(company.toLowerCase());
                         
                         return ( checkQuery && companyMatch ) ;
                     }).map((user, index) => (
@@ -37,7 +37,7 @@ function HomePage() {
                             desc={user.desc}
                             location={user.location}
                         />
-                        
+
                     ))}
                 </div>
             </div>
